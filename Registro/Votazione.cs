@@ -13,7 +13,7 @@ namespace Registro
         public Materia M { get; private set; }
 
 
-        public Votazione(Materia m, Studente studente, double valutazione)
+        public Votazione(Materia m, Studente studente, double valutazione) 
         {
             this.Valutazione = valutazione;
             this.Studente = studente;
