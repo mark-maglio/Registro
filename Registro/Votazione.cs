@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Registro
 {
-    class Votazione
+    public class Votazione
     {
         public double Valutazione;
         public DateTime Data { get; private set; }
@@ -13,7 +13,7 @@ namespace Registro
         public Materia M { get; private set; }
 
 
-        public Votazione(Materia m, Studente studente, double valutazione) 
+        public Votazione(Materia m, Studente studente, double valutazione)
         {
             this.Valutazione = valutazione;
             this.Studente = studente;
@@ -34,6 +34,10 @@ namespace Registro
         public double GetVoto()
         {
             return Valutazione;
+        }
+        public string Descrizione(Votazione v)
+        {
+            return $"{v.Valutazione}, Valutazione del {v.Data} di {v.Studente} in {v.M}";
         }
     }
 }
